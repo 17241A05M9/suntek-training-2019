@@ -1,0 +1,25 @@
+//Find A and B in a given array where A occurs twice and B is the //first positive repeating no. 
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10],b[10],n,i;
+    scanf("%d",&n);
+    printf("Enter the elements:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]>0)
+         b[a[i]]++;
+    }
+    i=1;
+    while(b[i]<=1)
+      i++;
+    printf("\n%d",b[0]);
+    i=1;
+    while(b[i]<=2)
+      i++;
+    printf("\nB:%d",i);
+    return 0;
+}
